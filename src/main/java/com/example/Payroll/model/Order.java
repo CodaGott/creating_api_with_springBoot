@@ -1,12 +1,9 @@
 package com.example.Payroll.model;
 
 
-import lombok.*;
+import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -16,5 +13,6 @@ public class Order {
     @GeneratedValue
     private Long Id;
     private String description;
+    @Enumerated(EnumType.STRING)
     private Status status;
 }
